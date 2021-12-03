@@ -1,0 +1,386 @@
+{
+	"main-menu" : {
+		"new" : "New Game",
+		"load" : "Load Game",
+		"contrib-levels" : "Contrib Levels",
+		"options" : "Options",
+		"quit" : "Quit Game"
+	},
+
+	"contrib-menu" : {
+		"empty" : "[No contrib levels available]"
+	},
+
+	"options-menu" : {
+		"difficulty" : "Difficulty",
+		"language" : "Language",
+		"keyboard" : "Keyboard Controls",
+		"joystick" : "Gamepad Controls",
+		"speedrun" : "Speedrun Timer"
+	},
+
+	"bool" : {
+		"on" : "On",
+		"off" : "Off"
+	},
+
+	"difficulty-levels" : {
+		"easy" : "Easy",
+		"normal" : "Normal",
+		"hard" : "Hard",
+		"super" : "Super Tux"
+	},
+
+	"pause-menu" : {
+		"continue" : "Continue",
+		"character" : "Change Character",
+		"restart" : "Restart Level",
+		"quit-game" : "Quit Game",
+		"quit-level" : "Quit Level"
+	},
+
+	"info" : {
+		"welcome" :
+		"Welcome to SuperTux Advance! This message will go away when you walk away from the block. Press F1 if you would like to see developer commentary. Press UP near NPCs to talk to them. Some have more than one thing to say.",
+		"tutWall" :
+		"Press JUMP against the wall to do a wall jump.",
+		"tutSlide" :
+		"Press DOWN while running or on a hill to slide.",
+		"waterjump" :
+		"Hold JUMP when leaving the water to gain height. Mix it with the RUN button to go even higher.",
+		"noend" :
+		"Levels that you don't need to complete to move on also do not have normal exits. Use the pause menu to leave areas like this.",
+		"hills" :
+		"Hills are very important! Practice sliding every chance you get.",
+		"pipes" :
+		"Pipes can be entered just by falling in. You can also hold DOWN to funnel yourself into them.",
+		"controls" :
+		"Don't forget to set your controls in the options menu on the main screen! If you really mess up setting them up, delete your config.json file.",
+		"secrets" :
+		"Secret passages are everywhere! Feel against the wall to reveal them, or watch for enemy movements.",
+		"coyotetime" :
+		"You have a brief moment after leaving the ground when you can still jump. Practice running off the edges and jumping just after your feet leave the ground.",
+		"tntex" :
+		"TNT blocks explode a short time after coming in contact with one.",
+		"chainex" :
+		"TNT blocks are also set off by explosions, which can lead to a sort of chain reaction when many TNT blocks are close to one another.",
+		"fireex" :
+		"Fireballs can set off TNT blocks, get a fire flower and try it out!",
+		"owplats" :
+		"One-way platforms can be dropped down from by pressing DOWN and JUMP at once. If you drop on accident, you have twice as long as when going over an edge to jump back up.",
+		"slidewarn" :
+		"Levels like this will force you to slide! (It's going to be replaced with something else in the future.)"
+	},
+
+	"devcom" : {
+		"welcome" :
+		"KELVIN: If you're seeing this, you have activated developer commentary mode. Touch the red scarves to read notes on the game's development.",
+		"hiff-0" :
+		"KELVIN: One of the many things that made me hiff was making deathcaps walk up this hill. For whatever reason, having them check twice as far ahead made them behave properly...",
+		"pipes" :
+		"KELVIN: I was going to have the pipes behave the same as the ones in Mario, but I found it annoying in those games having to tap up/down to find which ones were open, so instead, you just fall in.",
+		"firetux" :
+		"KELVIN: Originally, Fire Tux was going to have a helmet, as in the original SuperTux. A member of the SuperTux Discord server suggested using the design by Rusty Box. I agreed it looked better. The original can still be found on OpenGameArt.org.",
+		"coins" :
+		"KELVIN: Coins are purely for achievements. I never liked the extra lives mechanic, as it just means making a player wait even longer to try a level again if they get a game over. I didn't want to get rid of coins entirely, though, since that would make the levels too barren.",
+		"sliding" :
+		"KELVIN: The mechanic of increasing speed from dropping off a ledge came from needing to compensate for slopes not accelerating the player enough. It's tech- nically a glitch that I decided to throw in because it was fun. Many mechanics are actually that.",
+		"trees" :
+		"KELVIN: Trees don't grow in Antarctica. That's why penguins carve them out of ice.",
+		"snakes" :
+		"KELVIN: I know it makes about as much sense to have snakes in Antarctica as it does to have hungry plants. ",
+		"waterfalls" :
+		"KELVIN: This part of the cave looks especially nice to me. I love the spacious background with waterfalls in front of it. I wanted the level to feel like you were meant to explore it, so a scene like this that makes it feel big is meant to convey a sense of exploration.",
+		"loops" :
+		"KELVIN: Sorry, did you expect this loop to work? Ha! I'm nowhere near good enough to program that... yet.",
+		"contrib" :
+		"FROSTC: hello! this is the first dev commentary not written by kelvin, as this is the first contrib level.",
+		"walldev" :
+		"FROSTC: I didn't actually know you could just wall jump to get up here when I first made this area. I later thought of adding something to keep you from doing that, but decided against it",
+		"tnt" :
+		"FROSTC: I saw that TNT was used in Xtreme hills, so I decided to make a level showing it off. Also, fun fact, this level was competed before subsea",
+		"trans" :
+		"FROSTC: took me a good while to get the background transition to work, as this was for the most part the first time i used triggers",
+		"lifenote" :
+		"FROSTC: for those who played the older versions, hope you like the all new, much harder 1-up position! hahahahahaha!!",
+		"signnote" :
+		"FROSTC: if you are feeling a little lazy, you can just blast the pipe with a fireball to open it instead of sliding. maybe a good speedrunning strat??",
+		"sense":
+		"FROSTC: my 3rd level, just wanted to make a level losely inspired off of grumbel's sense of snow from the classic supertux. the funny part is that level isn't even in modern versions of the classic supertux!",
+		"subsea" :
+		"KELVIN: I wasn't sure how I wanted to handle underwater levels at first. I thought of the levels from SMB 1 and 3, but they seemed like something Tux could just shoot right through. Then I remembered DKC's underwater levels, how they were more like mazes where you had to dodge dangerous enemies. I figured that would work well for this game, since Tux is fast under water, and Konqi and Midi retain offensive capabilities in their neutral forms.",
+		"subsea-name" :
+		"KELVIN: The name, Subsea, comes from the track of the same name in SuperTuxKart. I was thinking it'd be cool to take areas from that game and reimagine them as platform levels instead of kart tracks. Candela City is planned as well, and the final level where you fight Nolok will be Fort Magma. Others from STK may appear as well.",
+		"tutorial-zone" :
+		"KELVIN: After getting some playtest feedback from Aurora Sol, I decided I should make this tutorial area to more clearly demonstrate basic mechanics. In his playtest, he actually skipped the first pipe, despite it having a sign hinting there's something about it, which led to him skipping the spot to learn swimming, too. Sliding places weren't clearly marked, either, and were also missed. This area won't let you progress until you've learned each mechanic, but can still be skipped if you already know the basics.",
+		"speedrunex":
+		"FROSTC:I had designed this level with the intention of people speedrunning it, so see how fast you can beat it! ",
+		"secretredex":
+		"FROSTC: the current version of this secret is very diffrent compared to how it used to be, one diffrence is that it used to have a bend in it. however i couldn't get that to work properly, that being the reason i scrapped it.",
+		"fishex":
+		"FROSTC: just like tux in trouble, this level was made before some of the earlier levels were added.",
+		"mezex":
+		"FROSTC: I had to make a few custom tiles to make this maze look good, it was worth it, i think! it's for sure the best part of this level.",
+		"outage":
+		"FROSTC: Another random fact... This and the last level only took 3 days to make in total! probably helped that school was canceled for the first day I started working on them due to a power outage or something. "
+	},
+
+	"npc" : {
+		"null" : "",
+		"rad-A" :
+		"The snow here is like, all purple and stuff... super weird.",
+		"rad-B" :
+		"Oh, hi tux",	
+		"rad-C" :
+		"...",
+		"rad-D" :
+		"hey, talk to sam. He's got something for you.",
+		"Sam-A" :
+		"augh, all the coins here are copper! can't run a good business while taking copper as payment! Anyways- check the bonus block. It's got a little something to help you out. "
+},
+
+	"level" : {
+		"shop" : "Sam's Trade Post",
+		"overworld-0" : "Aurora Isles",
+		"overworld-1" : "Antarctica",
+		"0-t0" : "Icey outpost",
+		"0-0" : "Learning the Slopes",
+		"0-1" : "Crystal Pass",
+		"0-2" : "Slip and Slide",
+		"0-3" : "Subsea",
+		"0-4" : "Tux 'N' Trouble",
+		"0-5" : "Frost's Sense of Snow",
+		"0-6a" : "Frozen Paradise",
+		"0-6b" : "Branching Path",
+		"0-7" : "The Ocean Bridge",
+		"0-8" : "Artic Wind",
+		"0-9" : "Sunken Steps",
+		"0-x" : "Xtreme Hills",
+		"0-c" : "Fort Borealis",
+		"Fw-t1" : "Icey outpost",
+		"Fw-1" : "Noted",
+		"Fw-2" : "Roots",
+		"Fw-3" : "Fire & Ice",
+		"Fw-4" : "supernovae",
+		"Fw-5" : "Cycles"
+	},
+
+	"key" : {
+		"0" : "_0",
+		"1" : "_1",
+		"2" : "_2",
+		"3" : "_3",
+		"4" : "A",
+		"5" : "B",
+		"6" : "C",
+		"7" : "D",
+		"8" : "E",
+		"9" : "F",
+		"10" : "G",
+		"11" : "H",
+		"12" : "I",
+		"13" : "J",
+		"14" : "K",
+		"15" : "L",
+		"16" : "M",
+		"17" : "N",
+		"18" : "O",
+		"19" : "P",
+		"20" : "Q",
+		"21" : "R",
+		"22" : "S",
+		"23" : "T",
+		"24" : "U",
+		"25" : "V",
+		"26" : "W",
+		"27" : "X",
+		"28" : "Y",
+		"29" : "Z",
+		"30" : "1",
+		"31" : "2",
+		"32" : "3",
+		"33" : "4",
+		"34" : "5",
+		"35" : "6",
+		"36" : "7",
+		"37" : "8",
+		"38" : "9",
+		"39" : "0",
+		"40" : "Enter",
+		"41" : "Escape",
+		"42" : "Backspace",
+		"43" : "Tab",
+		"44" : "Space",
+		"45" : "-",
+		"46" : "=",
+		"47" : "[",
+		"48" : "]",
+		"49" : "\\",
+		"50" : "/",
+		"51" : ";",
+		"52" : "'",
+		"53" : "`",
+		"54" : ",",
+		"55" : ".",
+		"56" : "/",
+		"57" : "CAP",
+		"58" : "F1",
+		"59" : "F2",
+		"60" : "F3",
+		"61" : "F4",
+		"62" : "F5",
+		"63" : "F6",
+		"64" : "F7",
+		"65" : "F8",
+		"66" : "F9",
+		"67" : "F10",
+		"68" : "F11",
+		"69" : "F12",
+		"70" : "Print",
+		"71" : "Scroll",
+		"72" : "Pause",
+		"73" : "Insert",
+		"74" : "Home",
+		"75" : "Pg Up",
+		"76" : "Delete",
+		"77" : "End",
+		"78" : "Pg Down",
+		"79" : "Right",
+		"80" : "Left",
+		"81" : "Down",
+		"82" : "Up",
+		"83" : "Num",
+		"84" : "#/",
+		"85" : "#*",
+		"86" : "#-",
+		"87" : "#+",
+		"88" : "#Ent",
+		"89" : "#1",
+		"90" : "#2",
+		"91" : "#3",
+		"92" : "#4",
+		"93" : "#5",
+		"94" : "#6",
+		"95" : "#7",
+		"96" : "#8",
+		"97" : "#9",
+		"98" : "#0",
+		"99" : "#.",
+		"100" : "\\",
+		"101" : "App",
+		"102" : "Pow",
+		"103" : "#=",
+		"104" : "F13",
+		"105" : "F14",
+		"106" : "F15",
+		"107" : "F16",
+		"108" : "F17",
+		"109" : "F18",
+		"110" : "F19",
+		"111" : "F20",
+		"112" : "F21",
+		"113" : "F22",
+		"114" : "F23",
+		"115" : "F24",
+		"116" : "Exe",
+		"117" : "Help",
+		"118" : "Menu",
+		"119" : "Select",
+		"120" : "Stop",
+		"121" : "Again",
+		"122" : "Undo",
+		"123" : "Cut",
+		"124" : "Copy",
+		"125" : "Paste",
+		"126" : "Find",
+		"127" : "Mute",
+		"128" : "Vol Up",
+		"129" : "Vol Down",
+		"130" : "#,",
+		"131" : "#=400",
+		"132" : "",
+		"133" : "",
+		"134" : "",
+		"135" : "",
+		"136" : "",
+		"137" : "",
+		"138" : "",
+		"139" : "",
+		"140" : "",
+		"141" : "",
+		"142" : "",
+		"143" : "",
+		"144" : "",
+		"145" : "",
+		"146" : "",
+		"147" : "",
+		"148" : "",
+		"149" : "",
+		"150" : "",
+		"151" : "",
+		"152" : "",
+		"153" : "",
+		"154" : "",
+		"155" : "",
+		"156" : "",
+		"157" : "",
+		"158" : "",
+		"159" : "",
+		"160" : "",
+		"161" : "",
+		"162" : "",
+		"163" : "",
+		"164" : "",
+		"165" : "",
+		"166" : "",
+		"167" : "",
+		"168" : "",
+		"169" : "",
+		"170" : "",
+		"171" : "",
+		"172" : "",
+		"173" : "",
+		"174" : "",
+		"175" : "",
+		"176" : "",
+		"177" : "",
+		"178" : "",
+		"179" : "",
+		"180" : "",
+		"181" : "",
+		"182" : "",
+		"183" : "",
+		"184" : "",
+		"185" : "",
+		"186" : "",
+		"187" : "",
+		"188" : "",
+		"189" : "",
+		"190" : "",
+		"191" : "",
+		"192" : "",
+		"193" : "",
+		"194" : "",
+		"195" : "",
+		"196" : "",
+		"197" : "",
+		"198" : "",
+		"199" : "",
+		"200" : "",
+		"201" : "",
+		"202" : "",
+		"203" : "",
+		"204" : "",
+		"205" : "",
+		"206" : "",
+		"207" : "",
+		"208" : "",
+		"209" : "",
+		"210" : "",
+		"211" : "",
+		"212" : "",
+		"213" : "",
+		"214" : "",
+		"215" : ""
+	}
+}
