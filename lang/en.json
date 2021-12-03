@@ -41,7 +41,7 @@
 
 	"info" : {
 		"welcome" :
-		"Welcome to SuperTux Advance! This message will go away when you walk away from the block. Press F1 if you would like to see developer commentary. Press UP near NPCs to talk to them. Some have more than one thing to say.",
+		"Welcome to the FrostLands, a set of level made by FrostC3424 that has custom assets, objects, bad guys, and more! do note that this set of levels is quite diffucult, so be sure to collect coins and 1 ups for extra lives so you can use checkpoints.",
 		"tutWall" :
 		"Press JUMP against the wall to do a wall jump.",
 		"tutSlide" :
