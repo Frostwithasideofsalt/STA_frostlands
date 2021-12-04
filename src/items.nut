@@ -345,7 +345,7 @@
 		shape.setPos(x, y)
 
 		if(gvPlayer != 0) if(distance2(x, y, gvPlayer.x, gvPlayer.y) <= 16) {
-			gvPlayer.invincible = 60 * 17
+			gvPlayer.invincible = 60 * 18
 			deleteActor(id)
 		}
 
