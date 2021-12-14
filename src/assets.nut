@@ -90,6 +90,7 @@
 ::sprFlowerFire <- newSprite("res/gfx/fireflower.png", 16, 16, 0, 0, 8, 8)
 ::sprFlowerIce <- newSprite("res/gfx/iceflower.png", 16, 16, 0, 0, 8, 8)
 ::sprDarkStar <- newSprite("res/gfx/Darknyan.png", 16, 16, 0, 0, 8, 8)
+::sprBM <- newSprite("res/gfx/B.png", 16, 16, 0, 0, 8, 8)
 ::sprAirFeather <- newSprite("res/gfx/airfeather.png", 16, 16, 0, 0, 8, 8)
 ::sprFlyRefresh <- newSprite("res/gfx/featherspin.png", 16, 16, 0, 0, 8, 8)
 ::sprEarthShell <- newSprite("res/gfx/earthshell.png", 16, 16, 0, 0, 8, 8)
@@ -173,6 +174,7 @@
 ::musDeluge <- "res/snd/deluge.ogg"
 ::musSnowTown <- "res/snd/winter_wonderland.ogg"
 ::musAirship <- "res/snd/airship.ogg"
+::musTrans <- "res/snd/mus1.ogg"
 
 //Saved separately so that it can be reused frequently
 ::musInvincible <- loadMusic("res/snd/invincible.ogg")

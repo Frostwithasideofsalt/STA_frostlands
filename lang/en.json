@@ -136,7 +136,9 @@
 		"rad-D" :
 		"hey, talk to sam. He's got something for you.",
 		"Sam-A" :
-		"augh, all the coins here are copper! can't run a good business while taking copper as payment! Anyways- check the bonus block. It's got a little something to help you out. "
+		"augh, all the coins here are copper! can't run a good business while taking copper as payment! Anyways- check the bonus block. It's got a little something to help you out. ",	
+		"fire-A" :
+		"Hey, im the one managing the Port at the moment. I don't have any boats, but I do have a few items for you."
 },
 
 	"level" : {
@@ -144,6 +146,7 @@
 		"overworld-0" : "Aurora Isles",
 		"overworld-1" : "Antarctica",
 		"0-t0" : "Icey outpost",
+		"0-t1" : "Frosty port",
 		"0-0" : "Learning the Slopes",
 		"0-1" : "Crystal Pass",
 		"0-2" : "Slip and Slide",
@@ -161,8 +164,12 @@
 		"Fw-1" : "Noted",
 		"Fw-2" : "Roots",
 		"Fw-3" : "Fire & Ice",
+		"Fw-3b" : "Blast off!!", 
 		"Fw-4" : "supernovae",
-		"Fw-5" : "Cycles"
+		"Fw-5" : "Cycles (unused)",
+		"Fw-6" : "To the left!",
+		"Fw-7" : "NoFoe",
+		"Fw-8" : "Flooded Forest"
 	},
 
 	"key" : {
