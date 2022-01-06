@@ -1,3 +1,35 @@
+
+
+everything in the mod not in the base game is made by FrostC, besides the music
+
+SONG LIST:
+
+-UNREAL SUPERHERO 3 (by kenet and rez)
+
+-TRANS ATLANTIC (by lizardking) 
+
+-STAR CHIPS (by necros)
+
+-RET*RD (by merlin)
+
+-PAUL THE PENGUIN (radix)
+
+-CARMEL CONDITION (ko0x)
+
+-STARLIGHT SURGAR MOOR (ko0x)
+
+-WHATEVER IT MEANS (by jakim)
+
+-DONOVANS MOOKBIKE (by radix)
+
+-DEADLOCK (elwood)
+
+-CYDONIAN SKY (Dubmood)
+
+-RANSUMAATA KAJHTAA (!Cube / Trauma)
+
+BASE GAME CREDITS:
+
 # Credits
 
 ## Code
@@ -5,6 +37,8 @@
 [Kelvin Shadewing](http://kelvinshadewing.net)
 
 [mrkubax10](https://github.com/mrkubax10) - Language menu
+
+[FrostC](https://www.youtube.com/channel/UCy9RpAf9M8icNBRXf3S6rmw) - Jumpy, Darknyan
 
 ## Graphics and Sounds
 
@@ -48,7 +82,7 @@
 
 [Spring](https://opengameart.org/users/spring-spring) - Large flame
 
-[FrostC](https://www.youtube.com/channel/UCy9RpAf9M8icNBRXf3S6rmw) - Toxic muffin, strawberry muffin, bomb muffin, Haywire, Tux doll, Orange
+[FrostC](https://www.youtube.com/channel/UCy9RpAf9M8icNBRXf3S6rmw) - Toxic muffin, strawberry muffin, bomb muffin, Haywire, Tux doll, Orange, Darknyan
 
 [TheCheeseWeez]() - Mega muffin
 
@@ -63,6 +97,8 @@
 [Nushio](http://opengameart.org/users/nushio) - LPC Terrain 2
 
 UbuntuJackson - UFO
+
+[Hugues Ross](https://content.minetest.net/users/Hugues%20Ross/) - RPG16
 
 ## Sounds
 
@@ -89,6 +125,8 @@ Lukas Nystrand - Chippdisko
 [wipics](https://opengameart.org/users/wipics) - Spooky Loop
 
 [Alex McCulloch](https://opengameart.org/users/pro-sensory) - Halloween
+
+[Eric Matyas](https://soundimage.org/) - Puzzle Game 2
 
 ## Level Contributors
 
@@ -122,4 +160,4 @@ Click each mascot to learn more about them and the projects they're associated w
 
 **Contribute 20 USD or more at [Kelvin Shadewing's Ko-Fi](https://ko-fi.com/kelvinshadewing) to be permanantly added to this list!**
 
-Blinkehyo, Cosmo Space Dragon, Hazel Roo, Kevin Pandaheart, Keyla Otter, Luke the Foxen, Neon Blade, Bazzel, Admiral Spraker
+[Blinkehyo](https://www.youtube.com/c/Blinkehyo), [Cosmo Space Dragon](https://www.youtube.com/channel/UCUWmz_daYiPH0YJ-SzLssAg), Hazel Roo, [Kevin Pandaheart](https://www.youtube.com/fichinga), Keyla Otter, [Luke the Foxen](https://www.deviantart.com/lukethefoxen), Neon Blade, Bazzel, [Admiral Spraker](https://www.twitch.tv/adm_spraker)

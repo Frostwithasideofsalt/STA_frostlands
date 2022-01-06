@@ -68,5 +68,5 @@
 [x] Sub items
 [ ] General store
 [ ] World travel
-[ ] In-game timer
-[ ] Jump buffering
+[x] In-game timer
+[x] Jump buffering

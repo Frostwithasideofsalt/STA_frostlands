@@ -5,7 +5,8 @@
 ::menu <- []
 ::cursor <- 0
 ::cursorOffset <- 0
-::menuMax <- 7 //Maximum number of slots that can be shown on screen
+const menuMax = 7 //Maximum number of slots that can be shown on screen
+const fontH = 14
 ::textMenu <- function(){
 	//If no menu is loaded
 	if(menu == []) return
@@ -14,17 +15,17 @@
 	//The number
 	if(menu.len() > menuMax) for(local i = cursorOffset; i < cursorOffset + menuMax; i++) {
 		if(cursor == i) {
-			drawSprite(font2, 97, (screenW() / 2) - (menu[i].name().len() * 4) - 16, screenH() - 8 - (menuMax * 14) + ((i - cursorOffset) * 14))
-			drawSprite(font2, 102, (screenW() / 2) + (menu[i].name().len() * 4) + 7, screenH() - 8 - (menuMax * 14) + ((i - cursorOffset) * 14))
+			drawSprite(font2, 97, (screenW() / 2) - (menu[i].name().len() * 4) - 16, screenH() - 8 - (menuMax * fontH) + ((i - cursorOffset) * fontH))
+			drawSprite(font2, 102, (screenW() / 2) + (menu[i].name().len() * 4) + 7, screenH() - 8 - (menuMax * fontH) + ((i - cursorOffset) * fontH))
 		}
-		drawText(font2, (screenW() / 2) - (menu[i].name().len() * 4), screenH() - 8 - (menuMax * 14) + ((i - cursorOffset) * 14), menu[i].name())
+		drawText(font2, (screenW() / 2) - (menu[i].name().len() * 4), screenH() - 8 - (menuMax * fontH) + ((i - cursorOffset) * fontH), menu[i].name())
 	}
 	else for(local i = 0; i < menu.len(); i++) {
 		if(cursor == i) {
-			drawSprite(font2, 97, (screenW() / 2) - (menu[i].name().len() * 4) - 16, screenH() - 8 - (menu.len() * 14) + (i * 14))
-			drawSprite(font2, 102, (screenW() / 2) + (menu[i].name().len() * 4) + 7, screenH() - 8 - (menu.len() * 14) + (i * 14))
+			drawSprite(font2, 97, (screenW() / 2) - (menu[i].name().len() * 4) - 16, screenH() - 8 - (menu.len() * fontH) + (i * fontH))
+			drawSprite(font2, 102, (screenW() / 2) + (menu[i].name().len() * 4) + 7, screenH() - 8 - (menu.len() * fontH) + (i * fontH))
 		}
-		drawText(font2, (screenW() / 2) - (menu[i].name().len() * 4), screenH() - 8 - (menu.len() * 14) + (i * 14), menu[i].name())
+		drawText(font2, (screenW() / 2) - (menu[i].name().len() * 4), screenH() - 8 - (menu.len() * fontH) + (i * fontH), menu[i].name())
 	}
 
 	//Keyboard input
@@ -56,7 +57,7 @@
 ::meMain <- [
 	{
 		name = function() { return gvLangObj["main-menu"]["new"] },
-		func = function() { cursor = 0; menu = meNewGame }
+		func = function() { cursor = 0; menu = meDifficulty }
 	},
 	{
 		name = function() { return gvLangObj["main-menu"]["load"] },
@@ -79,7 +80,7 @@
 	},
 	{
 		name = function() { return gvLangObj["pause-menu"]["restart"]},
-		func = function() { startPlay(gvMap.file) }
+		func = function() { gvIGT = 0; game.check = false; startPlay(gvMap.file) }
 	}
 	{
 		name = function() { return gvLangObj["pause-menu"]["quit-level"]},
@@ -112,10 +113,6 @@
 		func = function() { rebindGamepad() }
 	},
 	{
-		name = function() { return gvLangObj["options-menu"]["language"] },
-		func = function() { selectLanguage() }
-	},
-	{
 		name = function() { return gvLangObj["options-menu"]["speedrun"] + ": " + (config.showigt ? gvLangObj["bool"]["on"] : gvLangObj["bool"]["off"]) },
 		func = function() { config.showigt = !config.showigt}
 	},
@@ -128,19 +125,23 @@
 ::meDifficulty <- [
 	{
 		name = function() { return gvLangObj["difficulty-levels"]["easy"] },
-		func = function() { game.difficulty = 0; cursor = 0; menu = meOptions }
+		func = function() { game.difficulty = 0; cursor = 0; menu = meNewGame }
 	},
 	{
 		name = function() { return gvLangObj["difficulty-levels"]["normal"] },
-		func = function() { game.difficulty = 1; cursor = 0; menu = meOptions }
+		func = function() { game.difficulty = 1; cursor = 0; menu = meNewGame }
 	},
 	{
 		name = function() { return gvLangObj["difficulty-levels"]["hard"] },
-		func = function() { game.difficulty = 2; cursor = 0; menu = meOptions }
+		func = function() { game.difficulty = 2; cursor = 0; menu = meNewGame }
 	},
 	{
 		name = function() { return gvLangObj["difficulty-levels"]["super"] },
-		func = function() { game.difficulty = 3; cursor = 0; menu = meOptions }
+		func = function() { game.difficulty = 3; cursor = 0; menu = meNewGame }
+	},
+	{
+		name = function() { return "Cancel" },
+		func = function() { cursor = 0; menu = meMain }
 	}
 ]
 
@@ -215,3 +216,4 @@
 ]
 
 ::meLoadGame <- []
+//This menu is left empty intentionally; it will be created dynamically at runtime.

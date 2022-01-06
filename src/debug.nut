@@ -27,6 +27,11 @@
 	if(keyPress(k_2)) game.weapon = 1
 	if(keyPress(k_3)) game.weapon = 2
 	if(keyPress(k_4)) game.weapon = 3
+	if(keyPress(k_5)) game.health++
+	if(keyPress(k_7)) game.maxenergy++
+	if(keyPress(k_8)) game.maxHealth++
+	if(keyPress(k_9)) game.maxenergy--
+	if(keyPress(k_0)) game.maxHealth--
 	if(keyPress(k_equals)) game.lives++
 
 	//Teleport
@@ -47,7 +52,7 @@
 		message += "Y: " + floor(gvPlayer.y) + "\n"
 	}
 	else {
-		message += "X: YOU'RE\nY:  DEAD\n"
+		message += "X: you died!\nY:  try again\n"
 	}
 
 	message += "FPS: " + round(fps) + " (" + getFPS() + ")\n\n\n\n"
@@ -119,5 +124,19 @@
 		drawText(font, 0, 0, output)
 
 		update()
+	}
+}
+
+::PolyTest <- class extends Actor {
+	path = null
+
+	constructor(_x, _y, _arr = null) {
+		base.constructor(_x, _y)
+		path = _arr[0]
+	}
+
+	function run() {
+		setDrawColor(0xff0000ff)
+		for(local i = 0; i < path.len() - 1; i++) drawLine(path[i][0] - camx, path[i][1] - camy, path[i + 1][0] - camx, path[i + 1][1] - camy)
 	}
 }

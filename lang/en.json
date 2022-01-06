@@ -76,52 +76,6 @@
 		"welcome" :
 		"KELVIN: If you're seeing this, you have activated developer commentary mode. Touch the red scarves to read notes on the game's development.",
 		"hiff-0" :
-		"KELVIN: One of the many things that made me hiff was making deathcaps walk up this hill. For whatever reason, having them check twice as far ahead made them behave properly...",
-		"pipes" :
-		"KELVIN: I was going to have the pipes behave the same as the ones in Mario, but I found it annoying in those games having to tap up/down to find which ones were open, so instead, you just fall in.",
-		"firetux" :
-		"KELVIN: Originally, Fire Tux was going to have a helmet, as in the original SuperTux. A member of the SuperTux Discord server suggested using the design by Rusty Box. I agreed it looked better. The original can still be found on OpenGameArt.org.",
-		"coins" :
-		"KELVIN: Coins are purely for achievements. I never liked the extra lives mechanic, as it just means making a player wait even longer to try a level again if they get a game over. I didn't want to get rid of coins entirely, though, since that would make the levels too barren.",
-		"sliding" :
-		"KELVIN: The mechanic of increasing speed from dropping off a ledge came from needing to compensate for slopes not accelerating the player enough. It's tech- nically a glitch that I decided to throw in because it was fun. Many mechanics are actually that.",
-		"trees" :
-		"KELVIN: Trees don't grow in Antarctica. That's why penguins carve them out of ice.",
-		"snakes" :
-		"KELVIN: I know it makes about as much sense to have snakes in Antarctica as it does to have hungry plants. ",
-		"waterfalls" :
-		"KELVIN: This part of the cave looks especially nice to me. I love the spacious background with waterfalls in front of it. I wanted the level to feel like you were meant to explore it, so a scene like this that makes it feel big is meant to convey a sense of exploration.",
-		"loops" :
-		"KELVIN: Sorry, did you expect this loop to work? Ha! I'm nowhere near good enough to program that... yet.",
-		"contrib" :
-		"FROSTC: hello! this is the first dev commentary not written by kelvin, as this is the first contrib level.",
-		"walldev" :
-		"FROSTC: I didn't actually know you could just wall jump to get up here when I first made this area. I later thought of adding something to keep you from doing that, but decided against it",
-		"tnt" :
-		"FROSTC: I saw that TNT was used in Xtreme hills, so I decided to make a level showing it off. Also, fun fact, this level was competed before subsea",
-		"trans" :
-		"FROSTC: took me a good while to get the background transition to work, as this was for the most part the first time i used triggers",
-		"lifenote" :
-		"FROSTC: for those who played the older versions, hope you like the all new, much harder 1-up position! hahahahahaha!!",
-		"signnote" :
-		"FROSTC: if you are feeling a little lazy, you can just blast the pipe with a fireball to open it instead of sliding. maybe a good speedrunning strat??",
-		"sense":
-		"FROSTC: my 3rd level, just wanted to make a level losely inspired off of grumbel's sense of snow from the classic supertux. the funny part is that level isn't even in modern versions of the classic supertux!",
-		"subsea" :
-		"KELVIN: I wasn't sure how I wanted to handle underwater levels at first. I thought of the levels from SMB 1 and 3, but they seemed like something Tux could just shoot right through. Then I remembered DKC's underwater levels, how they were more like mazes where you had to dodge dangerous enemies. I figured that would work well for this game, since Tux is fast under water, and Konqi and Midi retain offensive capabilities in their neutral forms.",
-		"subsea-name" :
-		"KELVIN: The name, Subsea, comes from the track of the same name in SuperTuxKart. I was thinking it'd be cool to take areas from that game and reimagine them as platform levels instead of kart tracks. Candela City is planned as well, and the final level where you fight Nolok will be Fort Magma. Others from STK may appear as well.",
-		"tutorial-zone" :
-		"KELVIN: After getting some playtest feedback from Aurora Sol, I decided I should make this tutorial area to more clearly demonstrate basic mechanics. In his playtest, he actually skipped the first pipe, despite it having a sign hinting there's something about it, which led to him skipping the spot to learn swimming, too. Sliding places weren't clearly marked, either, and were also missed. This area won't let you progress until you've learned each mechanic, but can still be skipped if you already know the basics.",
-		"speedrunex":
-		"FROSTC:I had designed this level with the intention of people speedrunning it, so see how fast you can beat it! ",
-		"secretredex":
-		"FROSTC: the current version of this secret is very diffrent compared to how it used to be, one diffrence is that it used to have a bend in it. however i couldn't get that to work properly, that being the reason i scrapped it.",
-		"fishex":
-		"FROSTC: just like tux in trouble, this level was made before some of the earlier levels were added.",
-		"mezex":
-		"FROSTC: I had to make a few custom tiles to make this maze look good, it was worth it, i think! it's for sure the best part of this level.",
-		"outage":
 		"FROSTC: Another random fact... This and the last level only took 3 days to make in total! probably helped that school was canceled for the first day I started working on them due to a power outage or something. "
 	},
 
@@ -138,12 +92,26 @@
 		"Sam-A" :
 		"augh, all the coins here are copper! can't run a good business while taking copper as payment! Anyways- check the bonus block. It's got a little something to help you out. ",	
 		"fire-A" :
-		"Hey, im the one managing the Port at the moment. I don't have any boats, but I do have a few items for you."
+		"Hey, im the one managing the Port at the moment. I don't have any boats, but I do have a few items for you.",
+		"mrq" :
+		"Hai! I'm Marqies. Welcome to the Feather Shrine! Something Cool is up ahead",
+		"mark" :
+		"...",
+		"Gold" :
+		"Hey there buddy, check the game's mod folder. there's a little suprise for you",
+		"flame" :
+		"One day I will get a game of my own.. just you wait!",
+		"pix" :
+		"Hi, im from an old scratch game made by the creator this mod. hope they update the game sometime!",
+		"ninja" :
+		"Thank goodness im free from that shitty scratch game... It was awful! it could softlock on the menus if you weren't careful!! how the heck can you make something that bad!",
+		"tuc" :
+		"im     evil                                          tuckles"
 },
 
 	"level" : {
 		"shop" : "Sam's Trade Post",
-		"overworld-0" : "Aurora Isles",
+		"overworld-0" : "Frostlands",
 		"overworld-1" : "Antarctica",
 		"0-t0" : "Icey outpost",
 		"0-t1" : "Frosty port",
@@ -161,16 +129,19 @@
 		"0-x" : "Xtreme Hills",
 		"0-c" : "Fort Borealis",
 		"Fw-t1" : "Icey outpost",
+		"FS" : "Feather Shrine",
 		"Fw-1" : "Noted",
 		"Fw-2" : "Roots",
 		"Fw-3" : "Fire & Ice",
-		"Fw-3b" : "Blast off!!", 
-		"Fw-4" : "supernovae",
+		"Fw-3b" : "Blast off!", 
+		"Fw-4" : "Supernovae",
 		"Fw-5" : "Cycles (unused)",
 		"Fw-6" : "To the left!",
 		"Fw-7" : "NoFoe",
-		"Fw-8" : "Flooded Forest",
-		"Fw-9" : "switch it up!"
+		"Fw-8" : "In the heights",
+		"Fw-9" : "Switch it up!",
+		"Fw-10" : "Ballistic",
+		"GT" : "The goldtown"
 	},
 
 	"key" : {

@@ -8,7 +8,7 @@
 ::sprFont2 <- newSprite("res/gfx/font2.png", 12, 14, 0, 0, 0, 0)
 ::font2 <- newFont(sprFont2, 33, 0, 0, -4)
 ::sprDebug <- newSprite("res/gfx/debugkeys.png", 8, 8, 0, 0, 0, 0)
-::sprTitle <- newSprite("res/gfx/title.png", 220, 79, 0, 0, 110, 0)
+::sprTitle <- newSprite("res/gfx/title.png", 220, 114, 0, 0, 110, 0)
 
 ::sprTux <- newSprite("res/gfx/tux.png", 32, 32, 0, 0, 15, 19)
 ::sprTuxFire <- newSprite("res/gfx/tuxfire.png", 32, 32, 0, 0, 15, 19)
@@ -49,6 +49,8 @@
 ::sprTNT <- newSprite("res/gfx/tnt.png", 16, 16, 0, 0, 0, 0)
 ::sprC4 <- newSprite("res/gfx/c4.png", 16, 16, 0, 0, 0, 0)
 ::sprFireBlock <- newSprite("res/gfx/Fireblock.png", 16, 16, 0, 0, 0, 0)
+::sprColorBlock <- newSprite("res/gfx/switchblocks.png", 16, 16, 0, 0, 0, 0)
+::sprColorSwitch <- newSprite("res/gfx/colorswitches.png", 32, 32, 0, 0, 16, 16)
 
 //NPCs
 ::sprRadGuin <- newSprite("res/gfx/radguin.png", 22, 32, 0, 0, 16, 32)
@@ -61,6 +63,13 @@
 ::sprGnu <- newSprite("res/gfx/gnu.png", 29, 45, 0, 0, 15, 45)
 ::sprSam <- newSprite("res/gfx/sam.png", 12, 32, 0, 0, 6, 32)
 ::sprTuckles <- newSprite("res/gfx/tuckles.png", 18, 34, 0, 0, 8, 34)
+::sprmark <- newSprite("res/gfx/mark.png", 67, 67, 0, 0, 32, 64)
+::sprmarq <- newSprite("res/gfx/marqies.png", 34, 40, 0, 0, 32, 40)
+::sprFL <- newSprite("res/gfx/flameC.png", 18, 42, 0, 0, 16, 42)
+::sprNJ <- newSprite("res/gfx/ninjarun.png", 19, 18, 0, 0, 19, 18)
+::sprPX <- newSprite("res/gfx/pix.png", 18, 16, 0, 0, 18, 16)
+::sprFR <- newSprite("res/gfx/Frost.png", 16, 34, 0, 0, 16, 34)
+
 
 //Enemies
 ::sprSnake <- newSprite("res/gfx/snake.png", 16, 32, 0, 0, 8, 0)
@@ -70,7 +79,6 @@
 ::sprSnowBounce <- newSprite("res/gfx/orange.png", 16, 16, 0, 0, 8, 8)
 ::sprCannon <- newSprite("res/gfx/cannon.png", 16, 16, 0, 0, 8, 8)
 ::sprCannonBob <- newSprite("res/gfx/cannonbob.png", 16, 16, 0, 0, 8, 8)
-::sprJumpy <- newSprite("res/gfx/Jumpy.png", 18, 22, 0, 0, 8, 8)
 ::sprOuchin <- newSprite("res/gfx/ouchin.png", 16, 16, 0, 0, 8, 8)
 ::sprCarlBoom <- newSprite("res/gfx/carlboom.png", 16, 16, 0, 0, 8, 8)
 ::sprBlueFish <- newSprite("res/gfx/fishblue.png", 28, 20, 0, 0, 16, 12)
@@ -82,6 +90,10 @@
 ::sprIcicle <- newSprite("res/gfx/icicle.png", 10, 16, 0, 0, 5, 4)
 ::sprBounceCap <- newSprite("res/gfx/bouncecap.png", 16, 16, 0, 0, 8, 8)
 ::sprFlyAmanita <- newSprite("res/gfx/flyamanita.png", 20, 20, 0, 0, 10, 10)
+::sprJumpy <- newSprite("res/gfx/Jumpy.png", 18, 22, 0, 0, 8, 8)
+::sprDarkStar <- newSprite("res/gfx/darknyan.png", 16, 16, 0, 0, 8, 8)
+::sprBurncap <- newSprite("res/gfx/Livefire.png", 16, 16, 0, 0, 8, 9)
+::sprLivewire <- newSprite("res/gfx/Livewire.png", 16, 16, 0, 0, 8, 8)
 
 //Items
 ::sprMuffin <- newSprite("res/gfx/muffin.png", 16, 16, 0, 0, 8, 8)
@@ -89,8 +101,6 @@
 ::sprCoin <- newSprite("res/gfx/coin.png", 16, 16, 0, 0, 8, 8)
 ::sprFlowerFire <- newSprite("res/gfx/fireflower.png", 16, 16, 0, 0, 8, 8)
 ::sprFlowerIce <- newSprite("res/gfx/iceflower.png", 16, 16, 0, 0, 8, 8)
-::sprDarkStar <- newSprite("res/gfx/Darknyan.png", 16, 16, 0, 0, 8, 8)
-::sprBM <- newSprite("res/gfx/B.png", 16, 16, 0, 0, 8, 8)
 ::sprAirFeather <- newSprite("res/gfx/airfeather.png", 16, 16, 0, 0, 8, 8)
 ::sprFlyRefresh <- newSprite("res/gfx/featherspin.png", 16, 16, 0, 0, 8, 8)
 ::sprEarthShell <- newSprite("res/gfx/earthshell.png", 16, 16, 0, 0, 8, 8)
@@ -174,9 +184,15 @@
 ::musDeluge <- "res/snd/deluge.ogg"
 ::musSnowTown <- "res/snd/winter_wonderland.ogg"
 ::musAirship <- "res/snd/airship.ogg"
+::musPuzzle <- "res/snd/puzzle.ogg"
 ::musTrans <- "res/snd/mus1.ogg"
 ::musBike <- "res/snd/mus2.ogg"
 ::musDlk <- "res/snd/mus3.ogg"
+::musPen <- "res/snd/mus4.ogg"
+::musjk <- "res/snd/mus5.ogg"
+::musdubmood <- "res/snd/mus6.ogg"
+::musGTN <- "res/snd/unreal.ogg"
+::musKAJ <- "res/snd/mus7.ogg"
 
 
 //Saved separately so that it can be reused frequently

@@ -2,54 +2,35 @@
 | BLOCK SOURCE |
 \*============*/
 
-::WoodBlock <- class extends Actor {
-	shape = 0
-	mapshape = 0
-	slideshape = 0
+::TNTALT <- class extends Actor {
+	shape = null
+	gothit = false
+	hittime = 0.0
+	frame = 0.0
 
 	constructor(_x, _y, _arr = null) {
 		base.constructor(_x, _y)
 
-		shape = Rec(x, y + 2, 8, 8, 0)
-		mapshape = mapNewSolid(Rec(x, y - 2, 8, 6, 0))
-		slideshape = Rec(x, y - 1, 12, 8, 0)
+		shape = Rec(x, y, 10, 10, 0)
+		tileSetSolid(x, y, 1)
 	}
 
 	function run() {
-		if(gvPlayer != 0) {
-			if(gvPlayer.vspeed < 0) if(hitTest(shape, gvPlayer.shape)) {
-				gvPlayer.vspeed = 0
-				mapDeleteSolid(mapshape)
-				deleteActor(id)
-				newActor(WoodChunks, x, y)
-				playSound(sndBump, 0)
-			}
-
-			if(abs(gvPlayer.hspeed) >= 3 && gvPlayer.anim == gvPlayer.anSlide) if(hitTest(slideshape, gvPlayer.shape)) {
-				gvPlayer.vspeed = 0
-				mapDeleteSolid(mapshape)
-				deleteActor(id)
-				newActor(WoodChunks, x, y)
-				playSound(sndBump, 0)
-			}
-		}
-
-		drawSprite(sprWoodBox, 0, x - 8 - camx, y - 8 - camy)
+		drawSprite(sprC4, frame, x - 8 - camx, y - 8 - camy)
 	}
 
-	function _typeof() { return "WoodBlock" }
+	function _typeof() { return "TNTALT" }
 }
 
 ::EvilBlock <- class extends Actor {
 	shape = 0
-	mapshape = 0
 	slideshape = 0
 
 	constructor(_x, _y, _arr = null) {
 		base.constructor(_x, _y)
+		tileSetSolid(x, y, 1)
 
 		shape = Rec(x, y + 2, 8, 8, 0)
-		mapshape = mapNewSolid(Rec(x, y - 2, 8, 6, 0))
 		slideshape = Rec(x, y - 1, 12, 8, 0)
 	}
 
@@ -57,10 +38,10 @@
 		if(gvPlayer != 0) {
 			if(gvPlayer.vspeed < 0) if(hitTest(shape, gvPlayer.shape)) {
 				gvPlayer.vspeed = 0
-				mapDeleteSolid(mapshape)
 				deleteActor(id)
 				newActor(Poof, x, y)
 				playSound(sndBump, 0)
+				tileSetSolid(x, y, 0)
 				newActor(Darknyan, x, y - 16)
 			}
 
@@ -74,14 +55,13 @@
 
 ::BBLOCK <- class extends Actor {
 	shape = 0
-	mapshape = 0
 	slideshape = 0
 
 	constructor(_x, _y, _arr = null) {
 		base.constructor(_x, _y)
+		tileSetSolid(x, y, 1)
 
 		shape = Rec(x, y + 2, 8, 8, 0)
-		mapshape = mapNewSolid(Rec(x, y - 2, 8, 6, 0))
 		slideshape = Rec(x, y - 1, 12, 8, 0)
 	}
 
@@ -89,11 +69,11 @@
 		if(gvPlayer != 0) {
 			if(gvPlayer.vspeed < 0) if(hitTest(shape, gvPlayer.shape)) {
 				gvPlayer.vspeed = 0
-				mapDeleteSolid(mapshape)
 				deleteActor(id)
 				newActor(Poof, x, y)
 				playSound(sndBump, 0)
-				newActor(BM, x, y - 16)
+				tileSetSolid(x, y, 0)
+				newActor(MuffinBomb, x, y - 16)
 			}
 
 		}
@@ -106,7 +86,6 @@
 
 ::FireBlock <- class extends Actor {
 	shape = 0
-	mapshape = 0
 	slideshape = 0
 	fireshape = 0
 
@@ -114,22 +93,15 @@
 		base.constructor(_x, _y)
 
 		shape = Rec(x, y + 2, 8, 8, 0)
-		mapshape = mapNewSolid(Rec(x, y - 2, 8, 6, 0))
 		slideshape = Rec(x, y - 1, 12, 8, 0)
 		fireshape = Rec(x, y, 12, 12, 0)
+		tileSetSolid(x, y, 1)
 	}
 
 	function run() {
-		if(gvPlayer != 0) {
-			if(gvPlayer.vspeed < 0) if(hitTest(shape, gvPlayer.shape)) {
-			}
-
-			if(abs(gvPlayer.hspeed) >= 3 && gvPlayer.anim == gvPlayer.anSlide) if(hitTest(slideshape, gvPlayer.shape)) {
-			}
-		}
-
+		
 		if(actor.rawin("Fireball")) foreach(i in actor["Fireball"])  if(hitTest(fireshape, i.shape)) {
-			mapDeleteSolid(mapshape)
+			tileSetSolid(x, y, 0)
 			deleteActor(id)
 			deleteActor(i.id)
 			newActor(Poof, x, y)
@@ -140,10 +112,45 @@
 	}
 }
 
+::WoodBlock <- class extends Actor {
+	shape = 0
+	slideshape = 0
+
+	constructor(_x, _y, _arr = null) {
+		base.constructor(_x, _y)
+		tileSetSolid(x, y, 1)
+
+		shape = Rec(x, y + 2, 8, 8, 0)
+		slideshape = Rec(x, y - 1, 12, 8, 0)
+	}
+
+	function run() {
+		if(gvPlayer != 0) {
+			if(gvPlayer.vspeed < 0) if(hitTest(shape, gvPlayer.shape)) {
+				gvPlayer.vspeed = 0
+				deleteActor(id)
+				newActor(WoodChunks, x, y)
+				playSound(sndBump, 0)
+				tileSetSolid(x, y, 0)
+			}
+
+			if(abs(gvPlayer.hspeed) >= 3 && gvPlayer.anim == gvPlayer.anSlide) if(hitTest(slideshape, gvPlayer.shape)) {
+				gvPlayer.vspeed = 0
+				deleteActor(id)
+				newActor(WoodChunks, x, y)
+				playSound(sndBump, 0)
+				tileSetSolid(x, y, 0)
+			}
+		}
+
+		drawSprite(sprWoodBox, 0, x - 8 - camx, y - 8 - camy)
+	}
+
+	function _typeof() { return "WoodBlock" }
+}
 
 ::IceBlock <- class extends Actor {
 	shape = 0
-	mapshape = 0
 	slideshape = 0
 	fireshape = 0
 
@@ -151,16 +158,16 @@
 		base.constructor(_x, _y)
 
 		shape = Rec(x, y + 2, 8, 8, 0)
-		mapshape = mapNewSolid(Rec(x, y - 2, 8, 6, 0))
 		slideshape = Rec(x, y - 1, 12, 8, 0)
 		fireshape = Rec(x, y, 12, 12, 0)
+		tileSetSolid(x, y, 1)
 	}
 
 	function run() {
 		if(gvPlayer != 0) {
 			if(gvPlayer.vspeed < 0) if(hitTest(shape, gvPlayer.shape)) {
 				gvPlayer.vspeed = 0
-				mapDeleteSolid(mapshape)
+				tileSetSolid(x, y, 0)
 				deleteActor(id)
 				newActor(IceChunks, x, y)
 				playSound(sndBump, 0)
@@ -168,7 +175,7 @@
 
 			if(abs(gvPlayer.hspeed) >= 3 && gvPlayer.anim == gvPlayer.anSlide) if(hitTest(slideshape, gvPlayer.shape)) {
 				gvPlayer.vspeed = 0
-				mapDeleteSolid(mapshape)
+				tileSetSolid(x, y, 0)
 				deleteActor(id)
 				newActor(IceChunks, x, y)
 				playSound(sndBump, 0)
@@ -176,7 +183,7 @@
 		}
 
 		if(actor.rawin("Fireball")) foreach(i in actor["Fireball"])  if(hitTest(fireshape, i.shape)) {
-			mapDeleteSolid(mapshape)
+			tileSetSolid(x, y, 0)
 			deleteActor(id)
 			deleteActor(i.id)
 			newActor(Poof, x, y)
@@ -212,7 +219,6 @@
 
 ::ItemBlock <- class extends Actor {
 	shape = 0
-	mapshape = 0
 	full = true
 	v = 0.0
 	vspeed = 0.0
@@ -223,7 +229,7 @@
 		item = _arr
 
 		shape = Rec(x, y + 2, 8, 8, 0)
-		mapshape = mapNewSolid(Rec(x, y - 2, 8, 6, 0))
+		tileSetSolid(x, y, 1)
 	}
 
 	function run() {
@@ -282,6 +288,10 @@
 					//1up item
 					newActor(OneUp, x, y - 16)
 					break
+
+				case 9:
+					newActor(MuffinBomb, x, y - 16)
+					break
 			}
 		}
 
@@ -301,7 +311,6 @@
 
 ::TriggerBlock <- class extends Actor {
 	shape = 0
-	mapshape = 0
 	full = true
 	v = 0.0
 	vspeed = 0.0
@@ -313,7 +322,7 @@
 		code = _arr
 
 		shape = Rec(x, y + 2, 8, 8, 0)
-		mapshape = mapNewSolid(Rec(x, y - 2, 8, 6, 0))
+		tileSetSolid(x, y, 1)
 	}
 
 	function run() {
@@ -342,7 +351,6 @@
 
 ::InfoBlock <- class extends Actor {
 	shape = 0
-	mapshape = 0
 	full = true
 	v = 0.0
 	vspeed = 0.0
@@ -354,7 +362,7 @@
 		text = _arr
 
 		shape = Rec(x, y + 2, 8, 8, 0)
-		mapshape = mapNewSolid(Rec(x, y - 2, 8, 6, 0))
+		tileSetSolid(x, y, 1)
 	}
 
 	function run() {
@@ -414,7 +422,6 @@
 
 ::BounceBlock <- class extends Actor {
 	shape = 0
-	mapshape = 0
 	full = true
 	v = 0.0
 	vspeed = 0.0
@@ -424,8 +431,8 @@
 	constructor(_x, _y, _arr = null) {
 		base.constructor(_x, _y)
 
-		shape = Rec(x, y, 8, 8, 0)
-		mapshape = mapNewSolid(Rec(x, y - 2, 8, 6, 0))
+		shape = Rec(x, y, 8, 9, 0)
+		tileSetSolid(x, y, 1)
 	}
 
 	function run() {
@@ -497,7 +504,6 @@
 
 ::TNT <- class extends Actor {
 	shape = null
-	mapshape = null
 	gothit = false
 	hittime = 0.0
 	frame = 0.0
@@ -507,7 +513,7 @@
 		base.constructor(_x, _y)
 
 		shape = Rec(x, y, 10, 10, 0)
-		mapshape = mapNewSolid(Rec(x, y, 8, 8, 0))
+		tileSetSolid(x, y, 1)
 		fireshape = Rec(x, y, 12, 12, 0)
 	}
 
@@ -516,7 +522,7 @@
 			hittime++
 			frame += 0.002 * hittime
 			if(hittime >= 150) {
-				mapDeleteSolid(mapshape)
+				tileSetSolid(x, y, 0)
 				deleteActor(id)
 				newActor(BadExplode, x, y)
 			}
@@ -530,7 +536,7 @@
 		}
 
 		if(actor.rawin("Fireball")) foreach(i in actor["Fireball"]) if(hitTest(fireshape, i.shape)) {
-			mapDeleteSolid(mapshape)
+			tileSetSolid(x, y, 0)
 			deleteActor(id)
 			newActor(BadExplode, x, y)
 			deleteActor(i.id)
@@ -544,7 +550,6 @@
 
 ::C4 <- class extends Actor {
 	shape = null
-	mapshape = null
 	gothit = false
 	hittime = 0.0
 	frame = 0.0
@@ -553,7 +558,7 @@
 		base.constructor(_x, _y)
 
 		shape = Rec(x, y, 10, 10, 0)
-		mapshape = mapNewSolid(Rec(x, y, 8, 8, 0))
+		tileSetSolid(x, y, 1)
 	}
 
 	function run() {
@@ -561,4 +566,112 @@
 	}
 
 	function _typeof() { return "TNT" }
+}
+
+::ColorBlock <- class extends Actor {
+	color = null
+	filled = 0
+
+	constructor(_x, _y, _arr = null) {
+		base.constructor(_x, _y)
+		if(_arr == null) color = 0
+		else color = _arr
+
+		if(color != null) if(game.colorswitch[color]) filltile()
+	}
+
+	function filltile() {
+		//Get solid layer
+		local wl = null //Working layer
+		for(local i = 0; i < gvMap.data.layers.len(); i++) {
+			if(gvMap.data.layers[i].type == "tilelayer" && gvMap.data.layers[i].name == "solid") {
+				wl = gvMap.data.layers[i]
+				break
+			}
+		}
+
+		//Find tile
+		local cx = floor(x / 16)
+		local cy = floor(y / 16)
+		local tile = cx + (cy * wl.width)
+
+		//Make tile solid
+		if(tile >= 0 && tile < wl.data.len()) wl.data[tile] = gvMap.solidfid
+
+		filled = 1
+	}
+
+	function run() {
+		drawSprite(sprColorBlock, (color * 2) + filled, x - camx, y - camy)
+	}
+
+	function _typeof() { return "ColorBlock" }
+}
+
+
+::ColorSwitch <- class extends Actor {
+	color = 0
+	shape = null
+
+	constructor(_x, _y, _arr = null) {
+		base.constructor(_x, _y)
+		if(_arr == null) color = 0
+		else color = _arr
+
+		shape = Rec(x, y, 16, 16, 0)
+	}
+
+	function run() {
+		if(game.colorswitch[color]) drawSprite(sprColorSwitch, (color * 2) + 1, x - camx, y - camy)
+		else {
+			drawSprite(sprColorSwitch, color * 2, x - camx, y - camy)
+			if(gvPlayer != 0) if(hitTest(shape, gvPlayer.shape) && gvPlayer.y < y - 16 && gvPlayer.vspeed > 0) {
+				gvPlayer.vspeed = -1.5
+				game.colorswitch[this.color] = true
+				dostr("saveGame()")
+				if(actor.rawin("ColorBlock")) foreach(i in actor["ColorBlock"]) {
+					i.filltile()
+				}
+			}
+		}
+	}
+}
+
+::BreakBlock <- class extends Actor {
+	shape = 0
+	slideshape = 0
+	tile = 0
+	solidtile = 0
+	layer = 0
+	solidlayer = 0
+
+	constructor(_x, _y, _arr = null) {
+		base.constructor(_x, _y)
+
+		shape = Rec(x, y + 2, 8, 8, 0)
+		tileSetSolid(x, y, 1)
+		slideshape = Rec(x, y - 1, 12, 8, 0)
+
+		//Get graphic layer
+		for(local i = 0; i < gvMap.data.layers.len(); i++) {
+			if(gvMap.data.layers[i].type == "tilelayer" && gvMap.data.layers[i].name == "fg") {
+				layer = gvMap.data.layers[i]
+				break
+			}
+		}
+
+		//Find tile
+		local cx = floor(x / 16)
+		local cy = floor(y / 16)
+		tile = cx + (cy * layer.width)
+
+		//Get graphic layer
+		for(local i = 0; i < gvMap.data.layers.len(); i++) {
+			if(gvMap.data.layers[i].type == "tilelayer" && gvMap.data.layers[i].name == "solid") {
+				solidlayer = gvMap.data.layers[i]
+				break
+			}
+		}
+	}
+
 }

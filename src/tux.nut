@@ -257,13 +257,13 @@
 
 					if(placeFree(x + 4, y + 4)) {
 						hspeed += 0.1
-						vspeed += 0.5
+						vspeed += 1.0
 						if(!placeFree(x - 2, y + 2) && hspeed < 0) hspeed += 0.02
 					}
 
 					if(placeFree(x - 4, y + 4)) {
 						hspeed -= 0.1
-						vspeed += 0.5
+						vspeed += 1.0
 						if(!placeFree(x + 2, y + 2) && hspeed > 0) hspeed -= 0.02
 					}
 				}
@@ -318,6 +318,7 @@
 					if(felloff) {
 						anim = anFall
 						frame = anim[0]
+						if(getcon("up", "hold")) vspeed = -2.0
 					}
 
 					//Change direction
@@ -582,6 +583,7 @@
 			if(vspeed > 0) vspeed -= friction / 2
 			if(vspeed < 0) vspeed += friction / 2
 			if(abs(vspeed) < friction / 2) vspeed = 0.0
+			if(vspeed > 2) vspeed -= 0.2
 
 			//Change facing
 			if(anim != anClimb && anim != anWall) {
@@ -800,11 +802,11 @@
 		//Check against places in solid layer
 		if(wl != null) {
 			local tile = cx + (cy * wl.width)
-			if(tile >= 0 && tile < wl.data.len()) if(wl.data[tile] - gvMap.solidfid == 29) {
+			if(tile >= 0 && tile < wl.data.len()) if(wl.data[tile] - gvMap.solidfid == 29 || wl.data[tile] - gvMap.solidfid == 50) {
 				gvMap.shape.setPos((cx * 16) + 8, (cy * 16) + 8)
 				gvMap.shape.kind = 0
 				gvMap.shape.w = 1.0
-				gvMap.shape.h = 8.0
+				gvMap.shape.h = 12.0
 				if(hitTest(ns, gvMap.shape)) return true
 			}
 		}
@@ -824,7 +826,7 @@
 		local swap = game.subitem
 
 		if(game.weapon == game.subitem) {
-			if(game.maxenergy < 4) {
+			if(game.maxenergy < 4 - game.difficulty) {
 				game.maxenergy++
 				game.subitem = 0
 				tftime = 0
@@ -881,7 +883,7 @@
 		stopMusic()
 		playSound(sndDie, 0)
 		mywep = game.weapon
-		if((game.lives == 0 || game.check == false) && game.difficulty == 0) game.weapon = 0
+		if(game.lives == 0 || game.check == false) game.weapon = 0
 	}
 
 	function run() {
@@ -892,6 +894,7 @@
 			startPlay(gvMap.file)
 			if(game.check == true || game.difficulty > 0) if(game.lives > 0) game.lives--
 			if(game.lives == 0) game.check = false
+			if(game.check == false) gvIGT = 0
 		}
 		switch(mywep) {
 			case 0:
