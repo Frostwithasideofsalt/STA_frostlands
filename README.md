@@ -6,3 +6,5 @@ This levelpack is made for more experenced players, as the levels are generally 
 SUPERTUX ADVANCE: https://github.com/KelvinShadewing/supertux-advance
 
 ORIGINAL SUPERTUX: https://github.com/SuperTux/supertux
+
+CHECK THE CREDITS FILE IN THE DOCS FOLDER!
