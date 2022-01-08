@@ -184,6 +184,18 @@
                  "width":16,
                  "x":592,
                  "y":144
+                }, 
+                {
+                 "gid":219,
+                 "height":16,
+                 "id":97,
+                 "name":"sprTinyFireGuinb,0,say,fire-B",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":816,
+                 "y":112
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -192,7 +204,7 @@
          "y":0
         }],
  "nextlayerid":19,
- "nextobjectid":97,
+ "nextobjectid":98,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -330,7 +342,7 @@
          "margin":0,
          "name":"actors",
          "spacing":0,
-         "tilecount":80,
+         "tilecount":0,
          "tileheight":16,
          "tilewidth":16
         }],
