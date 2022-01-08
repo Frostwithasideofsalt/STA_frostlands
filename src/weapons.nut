@@ -54,7 +54,7 @@
 }
 
 ::Iceball <- class extends PhysAct {
-	timer = 90
+	timer = 130
 
 	constructor(_x, _y, _arr = null) {
 		base.constructor(_x, _y)
