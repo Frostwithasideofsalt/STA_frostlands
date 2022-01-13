@@ -25,6 +25,84 @@
 	function _typeof() { return "Coin" }
 }
 
+::Coin1 <- class extends Actor{
+	frame = 0.0
+
+	constructor(_x, _y, _arr = null)
+	{
+		base.constructor(_x, _y)
+		frame = randFloat(4)
+		game.maxcoins++
+	}
+
+	function run()
+	{
+		frame += 0.1
+		drawSprite(sprCoin1, frame, x - camx, y - camy)
+		if(gvPlayer != 0) if(distance2(x, y, gvPlayer.x, gvPlayer.y + 2) <= 14) {
+			deleteActor(id)
+			game.levelcoins++
+			playSound(sndCoinN, 0)
+			newActor(c1, x, y)
+			newActor(c1, x + 4, y + 2)
+			newActor(c1, x - 4, y + 2)
+		}
+	}
+
+}
+
+::Coin5 <- class extends Actor{
+	frame = 0.0
+
+	constructor(_x, _y, _arr = null)
+	{
+		base.constructor(_x, _y)
+		frame = randFloat(4)
+		game.maxcoins += 5
+	}
+
+	function run()
+	{
+		frame += 0.1
+		drawSprite(sprCoin5, frame, x - camx, y - camy)
+		if(gvPlayer != 0) if(distance2(x, y, gvPlayer.x, gvPlayer.y + 2) <= 14) {
+			deleteActor(id)
+			game.levelcoins += 5
+			playSound(sndCoinN, 0)
+			newActor(c5, x, y)
+			newActor(c5, x + 4, y + 2)
+			newActor(c5, x - 4, y + 2)
+		}
+	}
+
+}
+
+::Coin10 <- class extends Actor{
+	frame = 0.0
+
+	constructor(_x, _y, _arr = null)
+	{
+		base.constructor(_x, _y)
+		frame = randFloat(4)
+		game.maxcoins += 10
+	}
+
+	function run()
+	{
+		frame += 0.1
+		drawSprite(sprCoin10, frame, x - camx, y - camy)
+		if(gvPlayer != 0) if(distance2(x, y, gvPlayer.x, gvPlayer.y + 2) <= 14) {
+			deleteActor(id)
+			game.levelcoins += 10
+			playSound(sndCoinN, 0)
+			newActor(c10, x, y)
+			newActor(c10, x + 4, y + 2)
+			newActor(c10, x - 4, y + 2)
+		}
+	}
+
+}
+
 ::FlowerFire <- class extends Actor{
 
 	constructor(_x, _y, _arr = null)

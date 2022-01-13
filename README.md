@@ -7,4 +7,5 @@ SUPERTUX ADVANCE: https://github.com/KelvinShadewing/supertux-advance
 
 ORIGINAL SUPERTUX: https://github.com/SuperTux/supertux (salcon.mod and the base for the blazeborn enemy come from here)
 
+NEVERBALL: https://github.com/Neverball/neverball (bonus level assets)
 CHECK THE CREDITS FILE IN THE DOCS FOLDER!

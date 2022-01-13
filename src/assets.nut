@@ -34,6 +34,7 @@
 //Blocks
 ::sprVoid <- newSprite("res/gfx/void.png", 16, 32, 0, 0, 0, 0)
 ::sprBoxIce <- newSprite("res/gfx/icebox.png", 16, 16, 0, 0, 0, 0)
+::sprBump <- newSprite("res/gfx/Bump.png", 16, 16, 0, 0, 0, 0)
 ::sprBoxItem <- newSprite("res/gfx/itembox.png", 16, 16, 0, 0, 0, 0)
 ::sprBoxRed <- newSprite("res/gfx/redbox.png", 16, 16, 0, 0, 0, 0)
 ::sprBoxEmpty <- newSprite("res/gfx/emptybox.png", 16, 16, 0, 0, 0, 0)
@@ -100,6 +101,9 @@
 ::sprMuffin <- newSprite("res/gfx/muffin.png", 16, 16, 0, 0, 8, 8)
 ::sprStar <- newSprite("res/gfx/starnyan.png", 16, 16, 0, 0, 8, 8)
 ::sprCoin <- newSprite("res/gfx/coin.png", 16, 16, 0, 0, 8, 8)
+::sprCoin1 <- newSprite("res/gfx/coin-n1.png", 16, 16, 0, 0, 8, 8)
+::sprCoin5 <- newSprite("res/gfx/coin-n5.png", 16, 16, 0, 0, 8, 8)
+::sprCoin10 <- newSprite("res/gfx/coin-n10.png", 16, 16, 0, 0, 8, 8)
 ::sprFlowerFire <- newSprite("res/gfx/fireflower.png", 16, 16, 0, 0, 8, 8)
 ::sprFlowerIce <- newSprite("res/gfx/iceflower.png", 16, 16, 0, 0, 8, 8)
 ::sprAirFeather <- newSprite("res/gfx/airfeather.png", 16, 16, 0, 0, 8, 8)
@@ -126,12 +130,16 @@
 ::sprExplodeT <- newSprite("res/gfx/explodeT.png", 32, 32, 0, 0, 16, 16)
 ::sprWaterSurface <- newSprite("res/gfx/watersurface.png" 16, 4, 0, 0, 0, 0)
 ::sprHeal <- newSprite("res/gfx/heal.png", 7, 7, 0, 0, 3, 3)
+::sprC1 <- newSprite("res/gfx/star1.png", 7, 7, 0, 0, 3, 3)
+::sprC5 <- newSprite("res/gfx/star5.png", 7, 7, 0, 0, 3, 3)
+::sprC10 <- newSprite("res/gfx/star10.png", 7, 7, 0, 0, 3, 3)
 
 //Backgrounds
 ::bgPause <- 0
 ::bgCaveHoles <- newSprite("res/gfx/rockgapsBG.png", 400, 392, 0, 0, 0, 0)
 ::bgIridia <- newSprite("res/gfx/iridia.png", 100, 56, 0, 0, 0, 0)
 ::bgAurora <- newSprite("res/gfx/aurora.png", 720, 240, 0, 0, 0, 0)
+::bgNever <- newSprite("res/gfx/Anever.png", 720, 240, 0, 0, 0, 0)
 ::bgRiverCity <- newSprite("res/gfx/rivercity.png", 380, 240, 0, 0, 0, 0)
 ::bgOcean <- newSprite("res/gfx/ocean.png", 480, 240, 0, 0, 0, 0)
 ::bgForest0 <- newSprite("res/gfx/forest0.png", 128, 180, 0, 0, 0, 0)
@@ -155,6 +163,7 @@
 ::sndKick <- loadSound("res/snd/kick.ogg")
 ::sndSquish <- loadSound("res/snd/squish.ogg")
 ::sndCoin <- loadSound("res/snd/coin.ogg")
+::sndCoinN <- loadSound("res/snd/coinN.ogg")
 ::sndSlide <- loadSound("res/snd/slide.ogg")
 ::sndFlame <- loadSound("res/snd/flame.ogg")
 ::sndSpring <- loadSound("res/snd/trampoline.ogg")
@@ -194,6 +203,7 @@
 ::musdubmood <- "res/snd/mus6.ogg"
 ::musGTN <- "res/snd/unreal.ogg"
 ::musKAJ <- "res/snd/mus7.ogg"
+::musball <- "res/snd/city-theme.ogg"
 
 
 //Saved separately so that it can be reused frequently

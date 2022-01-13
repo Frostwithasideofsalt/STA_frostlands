@@ -134,3 +134,48 @@
 		else drawSpriteEx(sprHeal, floor(frame), x - camx, y - camy, 0, 0, 1, 1, 1)
 	}
 }
+
+::c1 <- class extends Actor {
+	frame = 0.0
+
+	constructor(_x, _y, _arr = null) {
+		base.constructor(_x, _y)
+	}
+	function run() {
+		if(frame < 1) frame += 0.02
+		frame += 0.05
+		y -= 0.5
+		if(frame >= 3) deleteActor(id)
+		else drawSpriteEx(sprC1, floor(frame), x - camx, y - camy, 0, 0, 1, 1, 1)
+	}
+}
+
+::c5 <- class extends Actor {
+	frame = 0.0
+
+	constructor(_x, _y, _arr = null) {
+		base.constructor(_x, _y)
+	}
+	function run() {
+		if(frame < 1) frame += 0.02
+		frame += 0.05
+		y -= 0.5
+		if(frame >= 3) deleteActor(id)
+		else drawSpriteEx(sprC5, floor(frame), x - camx, y - camy, 0, 0, 1, 1, 1)
+	}
+}
+
+::c10 <- class extends Actor {
+	frame = 0.0
+
+	constructor(_x, _y, _arr = null) {
+		base.constructor(_x, _y)
+	}
+	function run() {
+		if(frame < 1) frame += 0.02
+		frame += 0.05
+		y -= 0.5
+		if(frame >= 3) deleteActor(id)
+		else drawSpriteEx(sprC10, floor(frame), x - camx, y - camy, 0, 0, 1, 1, 1)
+	}
+}

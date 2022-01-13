@@ -10,23 +10,25 @@ SONG LIST:
 
 -STAR CHIPS (by necros)
 
--RET*RD (by merlin)
+-HYBRID (by Quazer/sanxion)
 
--PAUL THE PENGUIN (radix)
+-RETARD (by merlin) [SONG USED IN OLDER VERSIONS]
 
--CARMEL CONDITION (ko0x)
+-PAUL THE PENGUIN (by radix)
 
--STARLIGHT SURGAR MOOR (ko0x)
+-CARMEL CONDITION (by ko0x)
+
+-STARLIGHT SURGAR MOON (by ko0x)
 
 -WHATEVER IT MEANS (by jakim)
 
 -DONOVANS MOOKBIKE (by radix)
 
--DEADLOCK (elwood)
+-DEADLOCK (by elwood)
 
--CYDONIAN SKY (Dubmood)
+-CYDONIAN SKY by (Dubmood)
 
--RANSUMAATA KAJHTAA (!Cube / Trauma)
+-RANSUMAATA KAJHTAA by (!Cube / Trauma)
 
 BASE GAME CREDITS:
 

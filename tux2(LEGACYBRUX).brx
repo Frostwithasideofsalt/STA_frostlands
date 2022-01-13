@@ -88,13 +88,13 @@ gvPlayScreen = newTexture(screenW(), screenH())
 bgPause = newTexture(screenW(), screenH())
 
 //Set up window
-setWindowTitle("STA: Frostlands 2.1.1 CFT")
+setWindowTitle("STA: Frostlands 2.2.0 OFT")
 setWindowIcon("icon.png")
 tileSearchDir.push("res")
 tileSearchDir.push("res/gfx")
 tileSearchDir.push("res/map")
 tileSearchDir.push("res/snd")
-setFPS(110)
+setFPS(60)
 
 //Load game text
 if(fileExists("config.json")) config = jsonRead(fileRead("config.json"))

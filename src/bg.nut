@@ -49,6 +49,12 @@
 	}
 }
 
+::dbgNever <- function() {
+	for(local i = 0; i < 2; i++) {
+		drawSprite(bgNever, 0, ((-camx / 8) % 720) + (i * 720), screenH() - 240)
+	}
+}
+
 ::dbgIceForest <- function() {
 	if(gvMap != 0) {
 		for(local i = 0; i < 2; i++) drawSprite(bgIceForest, 0, ((-camx / 16) % 320) + (i * 320), 0)

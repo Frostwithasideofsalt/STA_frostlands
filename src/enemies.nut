@@ -2012,3 +2012,31 @@
 
 	function gethurt() { hurtplayer() }
 }
+
+::Blast <- class extends Actor{
+	frame = 0.0
+	shape = 0
+
+	constructor(_x, _y, _arr = null) {
+		base.constructor(_x, _y)
+
+		playSound(sndExplodeF, 0)
+
+		shape = Rec(x, y, 16, 16, 0)
+	}
+
+	function run() {
+		drawSpriteEx(sprExplodeN, frame, x - camx, y - camy, randInt(360), 0, 1, 1, 1)
+		frame += 0.1
+
+		if(gvPlayer != 0) {
+			if(hitTest(shape, gvPlayer.shape)) 
+			if(floor(frame) <= 1 && distance2(x, y, gvPlayer.x, gvPlayer.y) < 64) {
+				if(x < gvPlayer.x) gvPlayer.hspeed += 0.3
+				if(x > gvPlayer.x) gvPlayer.hspeed -= 0.3
+				if(y >= gvPlayer.y) gvPlayer.vspeed -= 0.4
+			}
+		}
+		if(frame >= 5) deleteActor(id)
+		}
+}
