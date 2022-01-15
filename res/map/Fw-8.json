@@ -7,7 +7,7 @@
          "height":100,
          "id":1,
          "name":"bg",
-         "opacity":0.9,
+         "opacity":1,
          "type":"tilelayer",
          "visible":true,
          "width":400,

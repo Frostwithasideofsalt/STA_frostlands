@@ -25,10 +25,10 @@
 	},
 
 	"difficulty-levels" : {
-		"easy" : "Easy",
-		"normal" : "Normal",
-		"hard" : "Hard",
-		"super" : "Super Tux"
+		"easy" : "I'm too young to die",
+		"normal" : "Hey, not too rough",
+		"hard" : "Hurt me plenty",
+		"super" : "Ultra-Violence"
 	},
 
 	"pause-menu" : {
