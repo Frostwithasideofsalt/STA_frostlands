@@ -578,3 +578,18 @@
 		drawSprite(sprMuffin, 3, x - camx, y - camy)
 	}
 }
+
+::Spakle <- class extends Actor{
+	constructor(_x, _y, _arr = null)
+	{
+		base.constructor(_x, _y)
+	}
+		function run() {
+	if(getFrames() % 3 == 0){	
+	newActor(c1, x - 16 + randInt(32), y - 16 + randInt(100))
+	}
+	}
+}
+
+::Sparkle <- class extends Actor{
+}
