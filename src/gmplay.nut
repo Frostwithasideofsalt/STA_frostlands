@@ -15,6 +15,8 @@
 	actlast = 0
 	game.health = game.maxHealth
 	game.levelcoins = 0
+	game.levelredcoins = 0
+    game.maxredcoins = 0
 	game.maxcoins = 0
 	game.secrets = 0
 	game.enemies = 0
@@ -451,13 +453,15 @@
 			}
 		}
 
-		//Draw coins and lives
-		drawSprite(sprCoin, 0, 16, screenH() - 16)
-		if(game.maxcoins > 0) drawText(font2, 24, screenH() - 23, game.levelcoins.tostring() + "/" + game.maxcoins.tostring())
-		else drawText(font2, 24, screenH() - 23, game.coins.tostring())
-		drawSprite(game.characters[game.playerchar][1], game.weapon, screenW() - 16, screenH() - 12)
-		drawText(font2, screenW() - 26 - (game.lives.tostring().len() * 8), screenH() - 23, game.lives.tostring())
-
+		// coins and lives
+        drawSprite(sprCoin, 0, 16, screenH() - 16)
+        if(game.maxcoins > 0) drawText(font2, 24, screenH() - 23, game.levelcoins.tostring() + "/" + game.maxcoins.tostring())
+        else drawText(font2, 24, screenH() - 23, game.coins.tostring())
+        drawSprite(game.characters[game.playerchar][1], game.weapon, screenW() - 16, screenH() - 12)
+        drawText(font2, screenW() - 26 - (game.lives.tostring().len() * 8), screenH() - 23, game.lives.tostring())
+        //redcoins or fish
+        if(game.maxredcoins > 0) drawSprite(sprRedCoin, 0, 16, screenH() - 40)
+        if(game.maxredcoins > 0) drawText(font2, 24, screenH() - 46, game.levelredcoins.tostring() + "/" + game.maxredcoins.tostring())
 		//Draw subitem
 		drawSprite(sprSubItem, 0, screenW() - 18, 18)
 		switch(game.subitem) {

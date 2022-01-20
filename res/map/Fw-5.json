@@ -1875,6 +1875,18 @@
                  "width":16,
                  "x":8512,
                  "y":400
+                }, 
+                {
+                 "gid":210,
+                 "height":16,
+                 "id":1294,
+                 "name":"shit",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":64,
+                 "y":336
                 }],
          "opacity":0.62,
          "type":"objectgroup",
@@ -1883,7 +1895,7 @@
          "y":0
         }],
  "nextlayerid":17,
- "nextobjectid":1294,
+ "nextobjectid":1295,
  "orientation":"orthogonal",
  "properties":[
         {

@@ -93,6 +93,10 @@
 	}
 }
 
+::dbgRace <- function() {
+	drawSprite(bgRace, 0, 0, (screenH() / 2) - 120)
+}
+
 ::dbgStarSky <- function() {
 	for(local i = 0; i < 3; i++) {
 		drawSprite(bgStarSky, 0, ((-camx / 16) % 240) + (i * 240), (screenH() / 2) - 120)

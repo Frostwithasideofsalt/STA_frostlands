@@ -94,10 +94,6 @@ const fontH = 14
 		func = function() { gvGameMode = gmOverworld }
 	},
 	{
-		name = function() { return gvLangObj["pause-menu"]["character"]},
-		func = function() {  }
-	},
-	{
 		name = function() { return gvLangObj["pause-menu"]["quit-game"]},
 		func = function() { startMain(); cursor = 0 }
 	}

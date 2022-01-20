@@ -53,6 +53,7 @@
 ::sprFireBlock <- newSprite("res/gfx/Fireblock.png", 16, 16, 0, 0, 0, 0)
 ::sprColorBlock <- newSprite("res/gfx/switchblocks.png", 16, 16, 0, 0, 0, 0)
 ::sprColorSwitch <- newSprite("res/gfx/colorswitches.png", 32, 32, 0, 0, 16, 16)
+::sprFishblock <- newSprite("res/gfx/fishblock.png", 16, 16, 0, 0, 0, 0)
 
 //NPCs
 ::sprRadGuin <- newSprite("res/gfx/radguin.png", 22, 32, 0, 0, 16, 32)
@@ -102,6 +103,7 @@
 ::sprMuffin <- newSprite("res/gfx/muffin.png", 16, 16, 0, 0, 8, 8)
 ::sprStar <- newSprite("res/gfx/starnyan.png", 16, 16, 0, 0, 8, 8)
 ::sprCoin <- newSprite("res/gfx/coin.png", 16, 16, 0, 0, 8, 8)
+::sprRedCoin <- newSprite("res/gfx/redcoin.png", 16, 16, 0, 0, 8, 8)
 ::sprCoin1 <- newSprite("res/gfx/coin-n1.png", 16, 16, 0, 0, 8, 8)
 ::sprCoin5 <- newSprite("res/gfx/coin-n5.png", 16, 16, 0, 0, 8, 8)
 ::sprCoin10 <- newSprite("res/gfx/coin-n10.png", 16, 16, 0, 0, 8, 8)
@@ -148,6 +150,7 @@
 ::bgWoodedMountain <- newSprite("res/gfx/woodedmountain.png", 720, 240, 0, 0, 0, 0)
 ::bgStarSky <- newSprite("res/gfx/starysky.png", 240, 240, 0, 0, 0, 0)
 ::bgUnderwater <- newSprite("res/gfx/underwaterbg.png", 320, 240, 0, 0, 0, 0)
+::bgRace <- newSprite("res/gfx/tuxracer.png", 320, 240, 0, 0, 0, 0)
 ::bgCastle <- newSprite("res/gfx/castlebg.png", 320, 240, 0, 0, 0, 0)
 ::bgSnowPlain <- newSprite("res/gfx/bgSnowPlain.png", 720, 240, 0, 0, 0, 0)
 ::bgSnowNight <- newSprite("res/gfx/bgSnowNight.png", 800, 240, 0, 0, 0, 0)
@@ -179,6 +182,8 @@
 ::sndIcicle <- loadSound("res/snd/icicle.ogg")
 ::sndIceBreak <- loadSound("res/snd/icebreak.ogg")
 ::snd1up <- loadSound("res/snd/1up.ogg")
+::sndfish <- loadSound("res/snd/fish.ogg")
+
 
 //Music
 ::gvMusic <- 0 //Stores the current music so that not too many large songs are loaded at once
@@ -205,6 +210,8 @@
 ::musGTN <- "res/snd/unreal.ogg"
 ::musKAJ <- "res/snd/mus7.ogg"
 ::musball <- "res/snd/city-theme.ogg"
+::musrace <- "res/snd/freezingpoint.ogg"
+
 
 
 //Saved separately so that it can be reused frequently

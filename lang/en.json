@@ -33,7 +33,7 @@
 
 	"pause-menu" : {
 		"continue" : "Continue",
-		"character" : "Change Character",
+		"character" : "",
 		"restart" : "Restart Level",
 		"quit-game" : "Quit Game",
 		"quit-level" : "Quit Level"
@@ -42,34 +42,12 @@
 	"info" : {
 		"welcome" :
 		"Welcome to the FrostLands, a set of level made by FrostC that has custom assets, objects, bad guys, and more! do note that this set of levels is quite diffucult, so be sure to collect coins and 1 ups for extra lives so you can use checkpoints.",
-		"tutWall" :
-		"Press JUMP against the wall to do a wall jump.",
-		"tutSlide" :
-		"Press DOWN while running or on a hill to slide.",
-		"waterjump" :
-		"Hold JUMP when leaving the water to gain height. Mix it with the RUN button to go even higher.",
-		"noend" :
-		"Levels that you don't need to complete to move on also do not have normal exits. Use the pause menu to leave areas like this.",
-		"hills" :
-		"Hills are very important! Practice sliding every chance you get.",
-		"pipes" :
-		"Pipes can be entered just by falling in. You can also hold DOWN to funnel yourself into them.",
-		"controls" :
-		"Don't forget to set your controls in the options menu on the main screen! If you really mess up setting them up, delete your config.json file.",
-		"secrets" :
-		"Secret passages are everywhere! Feel against the wall to reveal them, or watch for enemy movements.",
-		"coyotetime" :
-		"You have a brief moment after leaving the ground when you can still jump. Practice running off the edges and jumping just after your feet leave the ground.",
-		"tntex" :
-		"TNT blocks explode a short time after coming in contact with one.",
-		"chainex" :
-		"TNT blocks are also set off by explosions, which can lead to a sort of chain reaction when many TNT blocks are close to one another.",
-		"fireex" :
-		"Fireballs can set off TNT blocks, get a fire flower and try it out!",
-		"owplats" :
-		"One-way platforms can be dropped down from by pressing DOWN and JUMP at once. If you drop on accident, you have twice as long as when going over an edge to jump back up.",
-		"slidewarn" :
-		"Levels like this will force you to slide! (It's going to be replaced with something else in the future.)"
+		"Fish" :
+		"Collect all the fish to reach the exit!",
+		"shit" :
+		"This level sucks.",
+		"Ftwo" :
+		"are there blocks in the way? that means you didn't collect all fish. try again"
 	},
 
 	"devcom" : {
@@ -144,7 +122,9 @@
 		"Fw-9" : "Switch it up!",
 		"Fw-10" : "Ballistic",
 		"GT" : "The goldtown",
-		"B-1" : "NeverCity"
+		"B-1" : "NeverCity",
+		"B-2" : "freezing point",
+		"B-3" : "The funny(joke level)"
 	},
 
 	"key" : {

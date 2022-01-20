@@ -2,6 +2,29 @@
 | ITEMS SOURCE |
 \*============*/
 
+::RedCoin <- class extends Actor{
+	frame = 0.0
+
+	constructor(_x, _y, _arr = null)
+	{
+		base.constructor(_x, _y)
+		frame = randFloat(4)
+		game.maxredcoins++
+	}
+
+	function run()
+	{
+		frame += 0.1
+		drawSprite(sprRedCoin, frame, x - camx, y - camy)
+		if(gvPlayer != 0) if(distance2(x, y, gvPlayer.x, gvPlayer.y + 2) <= 14) {
+			deleteActor(id)
+			playSound(sndfish, 0)
+			game.levelredcoins++
+		}
+	}
+
+}
+
 ::Coin <- class extends Actor{
 	frame = 0.0
 

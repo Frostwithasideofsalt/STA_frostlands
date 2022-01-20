@@ -1,6 +1,7 @@
 
 
-everything in the mod not in the base game is made by FrostC, besides the music
+
+[ubuntu jackson](https://www.youtube.com/channel/UC-NJCmMCFxUMsOR1ZWoFszw) - red coin (fish) code, playtesting
 
 SONG LIST:
 
