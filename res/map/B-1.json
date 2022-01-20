@@ -868,18 +868,6 @@
                  "y":368
                 }, 
                 {
-                 "gid":252,
-                 "height":16,
-                 "id":739,
-                 "name":"Jumpy",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":4240,
-                 "y":320
-                }, 
-                {
                  "gid":220,
                  "height":16,
                  "id":740,

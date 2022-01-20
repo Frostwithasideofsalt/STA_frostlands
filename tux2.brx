@@ -88,7 +88,7 @@ gvPlayScreen = newTexture(screenW(), screenH())
 bgPause = newTexture(screenW(), screenH())
 
 //Set up window
-setWindowTitle("STA: Frostlands 2.3.0 CFT")
+setWindowTitle("STA: Frostlands 2.3.1 CFT")
 setWindowIcon("icon.png")
 tileSearchDir.push("res")
 tileSearchDir.push("res/gfx")
