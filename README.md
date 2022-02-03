@@ -23,5 +23,3 @@ ORIGINAL SUPERTUX: https://github.com/SuperTux/supertux (salcon.mod and the base
 NEVERBALL: https://github.com/Neverball/neverball (bonus level assets)
 CHECK THE CREDITS FILE IN THE DOCS FOLDER!
 
-
-use if brux is not working: https://cdn.discordapp.com/attachments/920094433368739850/933180502926590022/bruxfrostlands.zip
